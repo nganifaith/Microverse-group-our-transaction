@@ -1,0 +1,7 @@
+ <%= form_with model: @group do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: 'Enter group name',class: 'form-control',id:"name"  %><br><br/>
+    <%= f.label :group_icon %>
+    <%= f.file_field :group_icon, class: 'form-control',id:"icon"  %><br><br/>
+    <%= f.submit %>
+<% end %>

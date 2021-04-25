@@ -4,4 +4,6 @@ class Group < ApplicationRecord
 
   has_many :transactions
   belongs_to :user
+
+  has_one_attached :group_icon
 end
