@@ -1,5 +1,5 @@
-<% provide(:title, 'New Transaction') %>
-<%= form_with model: @transaction do |f| %>
+
+<%= form_with  model: @transaction do |f| %>
   <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
   <%= f.text_area :description, class: "form-control my-3", placeholder: "Description" %>
 

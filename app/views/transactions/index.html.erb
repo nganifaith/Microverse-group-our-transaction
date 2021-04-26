@@ -6,8 +6,14 @@
     <h5 class="text-muted m-0">Total Amount</h5>
     <p class="font-weight-bold m-0">$<%= number_with_precision(@transactions.sum(:amount), :precision => 2) %></p>
   </div>
-
-  <%= render @transactions %>
+<div>
+  <% @transactions.each do |transaction| %>
+    <%= group_image(transaction) %>
+    <%= transaction.name %>
+    <%= transaction.description %>
+    <%= transaction.amount%>
+  <% end %>
+</div>
 </div>
 
 <%= link_to new_transaction_path, class: "link-btn btn
