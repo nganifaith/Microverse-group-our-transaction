@@ -20,28 +20,27 @@ RSpec.describe 'the signin process', type: :system do
     fill_in 'user[password]', with: '123456'
     fill_in 'user[password_confirmation]', with: '123456'
     click_button 'Sign up'
-    # visit users_path
     expect(page).to have_text('Welcome! You have signed up successfully.')
   end
   it 'Signs_up with username already taken data' do
-    user1 = User.create(username: 'test1', email: 'test_user1@email.com', password: '123456')
+    user = User.create(username: 'test1', email: 'test_user1@email.com', password: '123456')
+    user.save
     visit new_user_registration_path
     fill_in 'user[username]', with: 'test1'
     fill_in 'user[email]', with: 'test_user11@email.com'
     fill_in 'user[password]', with: '123456'
     fill_in 'user[password_confirmation]', with: '123456'
-    # find('input[id="user_photo"]').click
     click_button 'Sign up'
     expect(page).to have_text('1 error prohibited this user from being saved:')
   end
   it 'Signs_up with email already taken data' do
-    user1 = User.create(username: 'test1', email: 'test_user1@email.com', password: '123456')
+    user = User.create(username: 'test1', email: 'test_user1@email.com', password: '123456')
+    user.save
     visit new_user_registration_path
     fill_in 'user[username]', with: 'test2'
     fill_in 'user[email]', with: 'test_user1@email.com'
     fill_in 'user[password]', with: '123456'
     fill_in 'user[password_confirmation]', with: '123456'
-    # find('input[id="user_photo"]').click
     click_button 'Sign up'
     expect(page).to have_text('1 error prohibited this user from being saved:')
   end

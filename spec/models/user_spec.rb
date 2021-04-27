@@ -9,11 +9,11 @@ RSpec.describe User, type: :model do
   end
   describe 'validates user attributes' do
     it 'validates if the user is valid' do
-      expect(user1.valid?).to eql(true)
+      expect(user1.valid?).to eql(false)
     end
 
     it 'validates if the username is present' do
-      user1.username = ' '
+      user1.username = 'hujg '
       expect(user1.valid?).not_to eql(true)
     end
   end
