@@ -28,7 +28,7 @@
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
-  transition: transform .5s;
+  transition: transform 0.5s;
   padding: 20px;
 }
 
@@ -39,7 +39,7 @@
     & ~ .sidenav {
       width: 250px;
     }
-  
+
     & ~ #main {
       transform: translateX(200px);
     }
@@ -48,19 +48,19 @@
       background-color: transparent;
       transform: rotate(360deg);
       transition: transform 250ms ease;
-      
+
       span {
         background-color: white;
         transition: transform 250ms ease;
-        
+
         &:nth-of-type(1) {
           transform: translateY(1px) rotate(45deg);
         }
-        
+
         &:nth-of-type(2) {
           display: none;
         }
-        
+
         &:nth-of-type(3) {
           transform: translateY(-1px) rotate(-45deg);
         }
@@ -70,21 +70,21 @@
 }
 
 #toggler {
-	position: fixed;
-	top: 5px;
-	left: 5px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	width: 50px;
-	height: 50px;
-	background-color: white;
-	border-radius: 50%;
-	box-shadow: 0 0 20px rgba(0,0,0,0.2);
-	transition: transform 250ms ease;
-	cursor: pointer;
-	z-index: 9999;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms ease;
+  cursor: pointer;
+  z-index: 9999;
 
   span {
     position: relative;
