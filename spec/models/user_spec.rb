@@ -20,7 +20,7 @@ RSpec.describe User, type: :model do
   describe 'associations' do
     it { should have_many(:groups) }
   end
-  describe 'associations' do 
+  describe 'associations' do
     it { should have_many(:transactions) }
   end
 end
