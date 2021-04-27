@@ -71,7 +71,7 @@ This is a mobile basic transaction project that allows you to create and view yo
 
 - [Live Demo Link](https://calm-brook-95634.herokuapp.com/)
 
-- [Video](https://www.loom.com/share/4e6d18b212854d00bf9221ba3b7a9704)
+- [Video](https://www.loom.com/share/4ff817c608cd4fedbd3322f3de4d9a1b)
 
 ## Contributing
 
@@ -90,7 +90,7 @@ Terminal or similar to execute the program.
 ## Clone project
 
 - To get a local copy up and running follow these simple example steps.
-- Clone this repository with git clone ```https://github.com/sergiocortessat/Rails-Tweet-Redesegin/tree/milestone_1``` using your terminal or command line.
+- Clone this repository with git clone ```https://github.com/nganifaith/Microverse-group-our-transaction.git``` using your terminal or command line.
 - Change to the project directory by entering: ```cd Rails-Tweet-Redesegin``` in the terminal.
 
 ## How to use the Private-Event app
