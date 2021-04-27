@@ -1,5 +1,6 @@
 <ul> All Groups</ul>
 <% @groups.each do |group| %>
+
   <%= load_image(group) %>
   <%= group.name%>
   <%= group.created_at%><br><br>
