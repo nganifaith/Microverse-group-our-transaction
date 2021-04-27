@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   root 'staticpages#home'
-  # get 'transaction/index'
-  # get 'transaction/create'
   get 'transaction/external'
   devise_for :users
   resources :users, only: %[index show]
