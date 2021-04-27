@@ -1,6 +1,5 @@
 class Transaction < ApplicationRecord
-  validates :name, presence: true, length: { in: 6..30 },
-                   uniqueness: true
+  validates :name, presence: true, length: { in: 6..30 }
   validates :description, presence: true, length: { in: 15..120 }
   validates :amount, presence: true, numericality: true
   validates :user_id, presence: true
