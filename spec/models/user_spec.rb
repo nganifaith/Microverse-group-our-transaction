@@ -17,4 +17,10 @@ RSpec.describe User, type: :model do
       expect(user1.valid?).not_to eql(true)
     end
   end
+  describe 'associations' do
+    it { should have_many(:groups) }
+  end
+  describe 'associations' do 
+    it { should have_many(:transactions) }
+  end
 end
