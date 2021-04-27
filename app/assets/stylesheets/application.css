@@ -16,7 +16,7 @@
 
 @import url(./nav.scss);
 
-.notice:empty, 
+.notice:empty,
 .alert:empty {
   display: none;
 }
