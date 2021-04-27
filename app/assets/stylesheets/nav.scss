@@ -10,7 +10,7 @@
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-
+  z-index: 9998;
   a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -84,7 +84,7 @@
 	box-shadow: 0 0 20px rgba(0,0,0,0.2);
 	transition: transform 250ms ease;
 	cursor: pointer;
-	z-index: 200;
+	z-index: 9999;
 
   span {
     position: relative;

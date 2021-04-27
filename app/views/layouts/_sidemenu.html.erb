@@ -1,5 +1,9 @@
 <input type='checkbox' id='menu-check'>
 
+<header class="header p-4 text-center font-weight-bold text-uppercase sticky-top bg-light text-dark">
+  Transactify
+</header>
+
 <!-- Use any element to open the sidenav -->
 <label for='menu-check' id="toggler">
   <span></span>
@@ -14,9 +18,5 @@
   <%= link_to 'All Groups', groups_path %>
   <%= link_to 'Logout', destroy_user_session_path, redirect_to: root_path, method: :delete %>
 </div>
-
-<header class="header p-4 text-center font-weight-bold text-uppercase position-sticky bg-light text-dark">
-  Transactify
-</header>
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
