@@ -25,7 +25,6 @@ class GroupsController < ApplicationController
     @transactions = @group.transactions
   end
 
-
   private
 
   def group_params
