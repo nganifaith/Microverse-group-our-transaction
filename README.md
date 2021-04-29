@@ -102,9 +102,9 @@ Terminal or similar to execute the program.
 
 ## Command line steps
 ```
-- $ git clone `$ git clone https://github.com/sergiocortessat/Rails-Tweet-Redesegin/pull/2`
-- $ git checkout develop
-- $ cd Rails-Tweet-Redesegin`
+- $ git clone `$ git clone https://github.com/nganifaith/Microverse-group-our-transaction.git`
+- $ cd Microverse group our transaction`
+- $ git checkout feature/groups
 - $ bundle 
 - $ rails webpacker:install 
 - $ rails db:create
