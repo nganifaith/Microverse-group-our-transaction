@@ -1,17 +1,22 @@
-<div>
+<div class="image-banner">
   <%= load_image(@group) %>
-  <%= @group.name%>
-  <%= @group.created_at%><br><br>
-</div>
-<% @transactions.each do |transaction| %>
-  <div class="card mb-1">
-    <div class="card-body">
-      <div class="card-title">Author:  <%= transaction.user.username %></div>
-      <div> 
-        <p class="card-subtitle mb-2 text-muted"><%= transaction.name %></p>
-        <p class="card-subtitle mb-2 text-muted"><%= transaction.description %></p>
-        <p class="card-subtitle mb-2 text-muted"><%= transaction.amount%></p>
-      </div>
-    </div>
+  <div>
+    <h3><%= @group.name%></h3>
+    <small><%= @group.created_at.strftime('%d %b %Y at %l:%M%P')%></small>
   </div>
- <% end %>   
+</div>
+<ul class="mobile-list">
+  <% @transactions.each do |transaction| %>
+    <li class="item">
+      <div class="details">
+        <p><%= transaction.user.username %></p>
+        <div class="title"><%= transaction.name %></div>
+        <p><%= transaction.description %></p>
+        <small><%= transaction.created_at.strftime('%d %b %Y at %l:%M%P')%></small>
+      </div>
+      <div class="font-weight-bold text-muted">
+        $<%= transaction.amount%>
+      </div>
+    </li>
+  <% end %>
+ </ul>

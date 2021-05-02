@@ -61,6 +61,7 @@ body {
 #main {
   transition: transform 0.5s;
   background-color: #fff;
+  min-height: calc(100vh - 72px);
 }
 
 #toggler {

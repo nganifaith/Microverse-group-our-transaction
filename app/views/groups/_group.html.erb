@@ -1,7 +1,10 @@
- <%= form_with  model: @group do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name, placeholder: 'Enter group name',class: 'form-control',id:"name"  %><br><br/>
-    <%= f.label :group_icon %>
-    <%= f.file_field :group_icon, class: 'form-control',id:"icon"  %><br><br/>
-    <%= f.submit %>
-<% end %>
+ <div class="container py-2">
+    <%= form_with  model: @group do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name, placeholder: 'Enter group name',class: 'form-control',id:"name"  %><br />
+        <%= f.label :group_icon %>
+        <%= f.file_field :group_icon, class: 'form-control',id:"icon"  %><br /><br/>
+        <%= f.submit class: "link-btn btn btn-success w-100 p-2 rounded-2 border border-light" %>
+    <% end %>
+ </div>
+ 
