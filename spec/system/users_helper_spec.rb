@@ -1,9 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'the signin process', type: :system do
-  before do
-    driven_by(:rack_test)
-  end
   it 'Signs in' do
     user1 = User.create(username: 'ngani1', email: 'test_user1@email.com', password: '123456')
     visit new_user_session_path

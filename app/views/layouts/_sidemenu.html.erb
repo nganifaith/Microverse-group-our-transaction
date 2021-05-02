@@ -13,8 +13,7 @@
 
 <div id="mySidenav" class="sidenav">
   <div class="profile">
-    <%= image_tag 'profile.jpeg', class: 'img-fluid' %>
-    <%= current_user.username %>
+    <%= display_profile %>
   </div>
   <%= link_to root_path do %>
     <i class="material-icons">home</i>
