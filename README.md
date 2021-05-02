@@ -46,15 +46,10 @@ This is a mobile basic transaction project that allows you to create and view yo
  This section gives the user the possibility to see all groups and the transactions carried out in the group a group is selected.
 
 ## Screenshot Test
-## Landing page
-<p align ="center">
-  <img height="auto" src="app/assets/images/landing.png">
-</p>
-
 ## Home page
 
 <p align="center">
-  <img height="auto" src="app/assets/images/homme.png">
+  <img height="auto" src="app/assets/images/home.png">
 </p>
 
 ## Transactions Page
@@ -64,7 +59,7 @@ This is a mobile basic transaction project that allows you to create and view yo
 
 ## Groups Page
 <p align="center">
-  <img height="auto" src="app/assets/images/groups.png">
+  <img height="auto" src="app/assets/images/group.png">
 </p>
 
 ## Live Demo
