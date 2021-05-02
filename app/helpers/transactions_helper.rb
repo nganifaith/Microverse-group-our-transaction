@@ -1,11 +1,11 @@
 module TransactionsHelper
-  def group_image(transaction, hide)
+  def group_image(group, hide)
     return if hide
 
-    if transaction.group&.group_icon&.attached?
-      image_tag(transaction.group.group_icon, class: 'img-thumbnail', alt: 'Group Icon')
+    if group&.group_icon&.attached?
+      image_tag(group.group_icon, class: 'img-thumbnail', alt: 'Group Icon')
     else
-      image_tag('default.jpeg', class: 'img-thumbnail', alt: 'Group icon')
+      image_tag('default.jpeg', class: 'img-thumbnail', alt: 'Group icon default')
     end
   end
 end

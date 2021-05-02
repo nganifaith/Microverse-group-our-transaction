@@ -1,5 +1,8 @@
 
-<%= form_with  model: @transaction do |f| %>
+<div class="notice p-3 mb-2 bg-danger text-white"><% @transaction.errors.full_messages.each do |error| %>
+    <p><%= error %></p>
+  <% end %></div>
+  <%= form_with  model: @transaction do |f| %>
   <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
   <%= f.text_area :description, class: "form-control my-3", placeholder: "Description" %>
 
