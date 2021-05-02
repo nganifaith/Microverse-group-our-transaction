@@ -9,6 +9,6 @@ class Transaction < ApplicationRecord
   has_many :group_transactions
   has_many :groups, through: :group_transactions
 
-  scope :all_trans, -> { includes(:groups) }
+  scope :grouped, -> { includes(:group) }
   scope :dsc, -> { order('created_at DESC') }
 end

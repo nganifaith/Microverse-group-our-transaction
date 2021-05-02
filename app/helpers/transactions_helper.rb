@@ -1,11 +1,13 @@
 module TransactionsHelper
-  def group_image(group, hide)
-    return if hide
-
-    if group&.group_icon&.attached?
-      image_tag(group.group_icon, class: 'img-thumbnail', alt: 'Group Icon')
+  def group_image(transaction, hide)
+    if !hide && transaction.group&.group_icon&.attached?
+      image_tag(transaction.group.group_icon, alt: 'Group Icon')
     else
-      image_tag('default.jpeg', class: 'img-thumbnail', alt: 'Group icon default')
+      image_tag('default.jpeg', alt: 'Group icon default')
     end
+  end
+
+  def title(only_external)
+    only_external ? 'External Transactions' : 'All Transactions'
   end
 end

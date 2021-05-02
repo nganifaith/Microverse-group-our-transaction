@@ -1,7 +1,7 @@
 class TransactionsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @transactions = params[:external] ? Transaction.all.where({ group_id: nil, user_id: current_user.id }).includes([:group]).dsc : Transaction.all_trans.where(user_id: current_user.id).includes([:group]).dsc
+    @transactions = params[:external] ? Transaction.where({ group_id: nil, user_id: current_user.id }).dsc : Transaction.grouped.where(user_id: current_user.id).dsc
     @external = params[:external]
   end
 

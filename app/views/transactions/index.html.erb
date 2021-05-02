@@ -6,25 +6,19 @@
 <div>
 <div class="container">
   <div class="row w-full">
-    <div class="col-12 col-sm-8 col-lg-5">
-      <h6 class="text-muted">All Transactions</h6> 
-      <ul class="list-group">
+    <div class="col-12 col-sm-8 col-lg-5 p-0">
+      <h6 class="text-muted px-2"><%= title(@external) %></h6> 
+      <ul class="mobile-list">
         <% @transactions.each do |transaction| %>
-          <li class="list-group-item row justify-content-between align-items-center">
-            <div class="image-parent col-sm">
-              <% transaction.groups.each do |group| %>
-                <%= group %>
-              <% end %>
-              <%= group_image(transaction.group, @external) %>
+          <li class="item">
+            <%= group_image(transaction, @external) %>
+            <div class="details">
+              <div class="title"><%= transaction.name %></div>
+              <p><%= transaction.description %></p>
+              <small><%= transaction.created_at.strftime('%d %b %Y at %l:%M%P')%></small>
             </div>
-            <div class="col-sm">
-              <%= transaction.name %><br>
-            </div>
-            <div class="col-sm">
-              <%= transaction.description %><br>
-            </div>
-            <div class="col-sm">
-              <%= transaction.amount%>
+            <div class="font-weight-bold text-muted">
+              $<%= transaction.amount%>
             </div>
           </li>
         <%end %>
