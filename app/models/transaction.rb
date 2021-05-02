@@ -5,7 +5,7 @@ class Transaction < ApplicationRecord
   validates :user_id, presence: true
 
   belongs_to :user
-  belongs_to :group
+  belongs_to :group, optional: true
   has_many :group_transactions
   has_many :groups, through: :group_transactions
 

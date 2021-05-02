@@ -8,4 +8,5 @@ class Group < ApplicationRecord
   belongs_to :user
 
   has_one_attached :group_icon
+  scope :asc_name, -> { order('name ASC') }
 end

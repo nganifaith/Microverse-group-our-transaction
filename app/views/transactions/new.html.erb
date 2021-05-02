@@ -2,18 +2,21 @@
 <div class="notice p-3 mb-2 bg-danger text-white"><% @transaction.errors.full_messages.each do |error| %>
     <p><%= error %></p>
   <% end %></div>
-  <%= form_with  model: @transaction do |f| %>
-  <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
-  <%= f.text_area :description, class: "form-control my-3", placeholder: "Description" %>
+  <%= form_with  model: @transaction do |f|%>
+  <div class="container pt-3"> 
+    <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
+      <%= f.text_area :description, class: "form-control my-3", placeholder: "Description" %>
 
-  <div class="input-group">
-    <div class="input-group-prepend">
-      <div class="input-group-text">$</div>
-    </div>
-    <%= f.number_field :amount, class: "form-control", placeholder: "Amount", min: "0", step: "0.01" %>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">$</div>
+        </div>
+        <%= f.number_field :amount, class: "form-control", placeholder: "Amount", min: "0", step: "0.01" %>
+      </div>
+
+      <%= collection_select(:transaction, :group_id, Group.all, :id, :name, { :prompt => 'Group' }, class: "form-control my-3" ) %>
+    
+      <%= f.submit class: "btn btn-primary my-4 mx-auto d-block" %>
   </div>
-
-  <%= collection_select(:transaction, :group_id, Group.all, :id, :name, { :prompt => 'Group' }, class: "form-control my-3" ) %>
- 
-  <%= f.submit class: "btn btn-primary my-4 mx-auto d-block" %>
+      
 <% end %>
