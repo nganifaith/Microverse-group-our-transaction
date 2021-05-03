@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(./nav.scss);
+
+.notice:empty,
+.alert:empty {
+  display: none;
+}

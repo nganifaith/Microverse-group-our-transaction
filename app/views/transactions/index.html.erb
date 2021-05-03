@@ -1,0 +1,35 @@
+<div>
+  <div class="card mb-3 p-3 flex-row justify-content-between border-top-0" id="trn-total">
+    <h5 class="text-muted m-0">Total Amount</h5>
+    <p class="font-weight-bold m-0">$<%= number_with_precision(@transactions.sum(:amount), :precision => 2) %></p>
+  </div>
+<div>
+<div class="container">
+  <div class="row w-full">
+    <div class="col-12 col-sm-8 col-lg-5 p-0">
+      <h6 class="text-muted px-2"><%= title(@external) %></h6> 
+      <ul class="mobile-list">
+        <% @transactions.each do |transaction| %>
+          <li class="item">
+            <%= group_image(transaction, @external) %>
+            <div class="details">
+              <div class="title"><%= transaction.name %></div>
+              <p><%= transaction.description %></p>
+              <small><%= transaction.created_at.strftime('%d %b %Y at %l:%M%P')%></small>
+            </div>
+            <div class="font-weight-bold text-muted">
+              $<%= transaction.amount%>
+            </div>
+          </li>
+        <%end %>
+      </ul>
+    </div>
+  </div>
+</div> 
+</div>
+</div>
+
+<%= link_to new_transaction_path, class: "link-btn btn
+                  btn-success w-100 p-4 rounded-0" do %>
+  <span class="p-3 border border-light">NEW TRANSACTION</span>
+<% end %>
