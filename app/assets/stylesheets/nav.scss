@@ -1,0 +1,140 @@
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  z-index: 9998;
+
+  a {
+    padding: 8px 8px 8px 17px;
+    text-decoration: none;
+    color: #f1f1f1;
+    transition: 0.3s;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+
+    i.material-icons {
+      margin-right: 10px;
+      height: 30px;
+      width: 30px;
+      border-radius: 30px;
+      font-size: 19px;
+      border: 1px solid;
+      padding: 5px;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+body {
+  background: linear-gradient(to bottom, #143865, #2e7fbc);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+  img {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    display: block;
+    border-radius: 100%;
+  }
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: transform 0.5s;
+  background-color: #fff;
+  min-height: calc(100vh - 72px);
+}
+
+#toggler {
+  position: fixed;
+  top: 10px;
+  left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  transition: transform 250ms ease;
+  cursor: pointer;
+  z-index: 9999;
+
+  span {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: #fff;
+    float: left;
+    transform-origin: center center;
+    transition: transform 250ms ease;
+    z-index: 200;
+
+    &:nth-of-type(1) {
+      transform: translateY(-5px);
+    }
+
+    &:nth-of-type(3) {
+      transform: translateY(5px);
+    }
+  }
+}
+
+.header {
+  background-color: #143865;
+}
+
+#menu-check {
+  display: none;
+
+  &:checked {
+    & ~ .sidenav {
+      width: 250px;
+    }
+
+    & ~ #main {
+      transform: translateX(250px);
+    }
+
+    & ~ #toggler {
+      background-color: transparent;
+      transform: rotate(360deg);
+      transition: transform 250ms ease;
+
+      span {
+        transition: transform 250ms ease;
+
+        &:nth-of-type(1) {
+          transform: translateY(1px) rotate(45deg);
+        }
+
+        &:nth-of-type(2) {
+          display: none;
+        }
+
+        &:nth-of-type(3) {
+          transform: translateY(-1px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
